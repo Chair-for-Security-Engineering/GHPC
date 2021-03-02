@@ -6,6 +6,7 @@ for the paper "Generic Hardware Private Circuits - Towards Automated Generation 
 
 ## Licensing
 Copyright (c) 2021, David Knichel, Pascal Sasdrich, Amir Moradi
+
 All rights reserved.
 
 Please see `LICENSE` for further license instructions.
