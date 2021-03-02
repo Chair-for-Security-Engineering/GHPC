@@ -1,0 +1,5 @@
+-- plaintext -  | -- key in1 ------------------- | - ciphertext  
+0000000000000000 00000000000000000000000000000000 96db702a2e6900af
+0000000000000000 ffffffffffffffffffffffffffffffff 13238c710272a5d8 
+ffffffffffffffff 00000000000000000000000000000000 3c6019e5e5edd563 
+ffffffffffffffff ffffffffffffffffffffffffffffffff 628d9fbd4218e5b4 
