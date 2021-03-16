@@ -44,7 +44,7 @@ end GHPC_Step2;
 
 architecture Behavioral of GHPC_Step2 is 
 
-	type in_array  is array(natural range <>) of std_logic_vector(in_size-1  downto 0);
+	type in_array  is array(natural range <>) of std_logic_vector(2**in_size-1  downto 0);
 
 	signal in_comb	: std_logic_vector(2**in_size-1 downto 0);
 	signal Step2	: in_array(0 to out_size-1);
