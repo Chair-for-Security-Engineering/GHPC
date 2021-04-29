@@ -1,7 +1,7 @@
 -----------------------------------------------------------------
 -- COMPANY : Ruhr University Bochum
 -- AUTHOR  : David Knichel david.knichel@rub.de, Pascal Sasdrich pascal.sasdrich@rub.de and Amir Moradi amir.moradi@rub.de 
--- DOCUMENT: [Generic Hardware Private Circuits - Towards Automated Generation of Composable Secure Gadgets] https://eprint.iacr.org/2021/
+-- DOCUMENT: [Generic Hardware Private Circuits - Towards Automated Generation of Composable Secure Gadgets] https://eprint.iacr.org/2021/247
 -- -----------------------------------------------------------------
 --
 -- Copyright c 2021, David Knichel, Pascal Sasdrich, Amir Moradi, 

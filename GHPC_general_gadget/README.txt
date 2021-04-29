@@ -19,4 +19,4 @@ All rights reserved.
 Please see `LICENSE` for further license instructions.
 
 ## Publications
-D. Knichel, P. Sasdrich, A. Moradi (2021): "Generic Hardware Private Circuits - Towards Automated Generation of Composable Secure Gadgets" https://eprint.iacr.org/2021/
+D. Knichel, P. Sasdrich, A. Moradi (2021): "Generic Hardware Private Circuits - Towards Automated Generation of Composable Secure Gadgets" https://eprint.iacr.org/2021/247
