@@ -33,8 +33,7 @@ entity GHPC_Step2 is
    Generic (
       in_size	    : integer;
       out_size	    : integer; 
-      low_latency   : integer;
-      pipeline      : integer);
+      low_latency   : integer);
    Port(
 	Step1_reg	: in  bus_array(0 to out_size-1, 2**in_size-1 downto 0);
 	input		: in  std_logic_vector(in_size-1  downto 0);

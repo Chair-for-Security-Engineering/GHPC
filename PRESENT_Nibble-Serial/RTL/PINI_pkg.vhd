@@ -50,8 +50,6 @@ package PINI_pkg is
 
 	constant fresh_size 	: integer := out_size*(1 + low_latency*(2**in_size - 1));
 
-	constant pipeline 	: integer := 1;
-        
         constant ORDER          : integer := 1;
         constant LATENCY        : integer := 2 - low_latency;
 

@@ -33,8 +33,7 @@ entity GHPC_Gadget is
    Generic (
       in_size	    : integer := 2;
       out_size	    : integer := 1; 
-      low_latency   : integer := 1;   -- 0 / 1
-      pipeline      : integer := 0);  -- 0 / 1
+      low_latency   : integer := 1);  -- 0 / 1
    Port(
 	in0 : in  std_logic_vector(in_size-1  downto 0);
 	in1 : in  std_logic_vector(in_size-1  downto 0);
@@ -59,36 +58,29 @@ architecture Behavioral of GHPC_Gadget is
 begin
 
 	GEN_in: for I in 0 to in_size-1 generate
-           GEN_pp: if (pipeline /= 0) generate
 		reg_ins1: entity work.reg
 		Port map(
 			clk	=> clk,
 			D	=> in1(I),
 			Q	=> in1_reg(I));
-           end generate;
-
-           GEN_npp: if (pipeline = 0) generate
-		in1_reg(I) <= in1(I);
-           end generate;
 	end generate;	
 
 	--===============================
 
 	Step1_ins: entity work.GHPC_Step1
-	Generic map (in_size, out_size, out_size*(1+low_latency*(2**in_size-1)), low_latency, pipeline)
+	Generic map (in_size, out_size, out_size*(1+low_latency*(2**in_size-1)), low_latency)
 	Port map (in0, r, clk, Step1_reg);
 
 	---------------------------------
 
 	Step2_inst: entity work.GHPC_Step2
-	Generic map (in_size, out_size, low_latency, pipeline)
+	Generic map (in_size, out_size, low_latency)
 	Port map (Step1_reg, in1_reg, clk, out1);
 	
 	--===============================
 
 	GEN_out: for X in 0 to out_size-1 generate
            GEN_normal: if (low_latency = 0) generate
-              GEN_pp: if (pipeline /= 0) generate
 	         reg_out0_ins1: entity work.reg
 		   Port map(
 		      clk => clk,
@@ -100,11 +92,6 @@ begin
 	             clk => clk,
 	             D	 => out0_mid(X),
 	             Q	 => out0(X));
-              end generate;
-
-              GEN_npp: if (pipeline = 0) generate
-	  	out0(X) <= r(X);
-              end generate;
            end generate;
 
    	   GEN_LL: if (low_latency /= 0) generate

@@ -34,8 +34,7 @@ entity GHPC_Step1 is
       in_size	    : integer;
       out_size	    : integer; 
       fresh_size    : integer;
-      low_latency   : integer;
-      pipeline      : integer);
+      low_latency   : integer);
    Port(
 	in0 		: in  std_logic_vector(in_size-1    downto 0);
 	r   		: in  std_logic_vector(fresh_size-1 downto 0);
